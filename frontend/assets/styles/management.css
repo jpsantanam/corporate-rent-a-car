@@ -1,4 +1,4 @@
-@import url("/Codigo/frontend/assets/styles/variaveis.css");
+@import url("/assets/styles/variaveis.css");
 
 main{
     background-color: var(--fundo-gerenciamento);
