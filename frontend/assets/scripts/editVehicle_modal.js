@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const API_URL = 'https://corporate-rent-a-car.onrender.com/';
+    const API_URL = 'https://corporate-rent-a-car.onrender.com';
     const selectAno = document.getElementById('editAno');
     const anoAtual = new Date().getFullYear();
     const form = document.getElementById('formEditarVeiculo');
