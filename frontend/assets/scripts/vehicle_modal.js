@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const API_URL = 'http://localhost:3000';
+    const API_URL = 'https://corporate-rent-a-car.onrender.com/';
 
     // Função para gerar os anos no dropdown de seleção de ano
     const gerarAnosDropdown = () => {

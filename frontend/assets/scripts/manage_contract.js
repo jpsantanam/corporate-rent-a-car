@@ -161,7 +161,7 @@ manageRentModal.on('show.bs.modal', async event => {
     
         try {
             // Faz o request para o backend para gerar o contrato
-            const response = await fetch('http://localhost:3000/contracts/generate', {
+            const response = await fetch('https://corporate-rent-a-car.onrender.com//contracts/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
