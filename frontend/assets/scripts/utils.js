@@ -1,4 +1,4 @@
-const API_URL = "https://corporate-rent-a-car.onrender.com/";
+const API_URL = "https://corporate-rent-a-car.onrender.com";
 
 function togglePassword(event) {
     const passwordField = event.target.closest(".input-group").querySelector("input");

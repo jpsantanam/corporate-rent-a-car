@@ -267,13 +267,13 @@ const createRentHistoryButton = async (data) => {
 }
 
 const fetchCustomers = async () => {
-    const response = await fetch('https://corporate-rent-a-car.onrender.com//customers');
+    const response = await fetch('https://corporate-rent-a-car.onrender.com/customers');
     const data = await response.json();
     return data;
 };
 
 const fetchCompanies = async () => {
-    const response = await fetch('https://corporate-rent-a-car.onrender.com//companies');
+    const response = await fetch('https://corporate-rent-a-car.onrender.com/companies');
     const data = await response.json();
     return data;
 }
@@ -309,7 +309,7 @@ const postRent = async () => {
         rent.companyId = clientId;
     }
 
-    const response = await fetch('https://corporate-rent-a-car.onrender.com//rents', {
+    const response = await fetch('https://corporate-rent-a-car.onrender.com/rents', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -346,7 +346,7 @@ const updateRent = async () => {
         rent.companyId = clientId;
     }
 
-    const response = await fetch(`https://corporate-rent-a-car.onrender.com//rents/${rentId}`, {
+    const response = await fetch(`https://corporate-rent-a-car.onrender.com/rents/${rentId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

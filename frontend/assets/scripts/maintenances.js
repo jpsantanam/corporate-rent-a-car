@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    const API_URL = 'https://corporate-rent-a-car.onrender.com/';
+    const API_URL = 'https://corporate-rent-a-car.onrender.com';
     const modalElement = document.getElementById('modalManutencao');
     window.modalInstance = new bootstrap.Modal(modalElement);
 
@@ -442,7 +442,7 @@ async function handleFormSubmit(event) {
 }
 
 function createMaintenance(data) {
-    fetch('https://corporate-rent-a-car.onrender.com//maintenances', {
+    fetch('https://corporate-rent-a-car.onrender.com/maintenances', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -472,7 +472,7 @@ function createMaintenance(data) {
 }
 
 function updateMaintenance(id, data) {
-    fetch(`https://corporate-rent-a-car.onrender.com//maintenances/${id}`, {
+    fetch(`https://corporate-rent-a-car.onrender.com/maintenances/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
