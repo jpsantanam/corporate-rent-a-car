@@ -1,0 +1,20 @@
+@import url("/Codigo/frontend/assets/styles/variaveis.css");
+body{
+    background-color: var(--primary-color);
+}
+
+body main > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    width: 80%;
+}
+
+form button.btn-primary  {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color);
+}

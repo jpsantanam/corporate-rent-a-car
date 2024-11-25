@@ -1,0 +1,26 @@
+{
+  "name": "corporate-api",
+  "version": "1.0.0",
+  "description": "Corporate Rent a Car API",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "Joao Pedro Santana",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.51.2",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "md5": "^2.3.0",
+    "pizzip": "^3.1.7",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.5"
+  }
+}

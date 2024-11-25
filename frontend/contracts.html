@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOL - Histórico de Locação</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+    <!---->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="./assets/styles/contracts.css">
+    <link rel="stylesheet" href="./assets/styles/management.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <!----->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/scripts/utils.js"></script>
+    <script src="./assets/scripts/accessControl.js"></script>
+    <script src="./assets/scripts/autoComplete.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main class="w-100 m-auto form-container">
+        <div class="container-fluid my-5">
+            <div id="new-rent-card" class="row d-flex justify-content-between align-items-center">
+                <h1 class="h1 col-12 col-sm-9 text-start">Histórico de contratos</h1>
+                <div class="col-12 col-sm-3 dropdown text-end justify-content-end">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#manageRent" data-bs-action="POST">Novo Contrato</button>
+                </div>
+            </div>
+        <div class="search">
+            <div id="search-rent-card">
+                <form id="search-rent" class="container-fluid my-5">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <h3 class="h3 col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 text-start">Pesquisa de Contrato</h3>
+                        <div class="col-12 col-sm-5 col-md-6 col-lg-7 col-xl-8 d-flex justify-content-end">
+                            <div class="input-group">
+                                <input id="search" name="search" type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="confirm-search">
+                                <button id="confirm-search" type="submit" class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"> </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="d-flex justify-content-evenly align-items-center mt-6">
+                            <div class="form-check">
+                                <label class="form-check-label" for="includeAdmin">Administrador</label>
+                                <input id="includeAdmin" class="form-check-input" type="checkbox" name="includeAdmin">
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label" for="includeOperator">Operador</label>
+                                <input id="includeOperator" class="form-check-input" type="checkbox" name="includeOperator">
+                            </div>
+                            <div>
+                                <label class="form-label" for="startDate">Data Início</label>
+                                <div class="input-group">
+                                    <input id="startDate" type="date" class="form-control rounded overflow-hidden" name="startDate">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-label" for="endDate">Data Fim</label>
+                                <div class="input-group">
+                                    <input id="endDate" type="date" class="form-control rounded overflow-hidden" name="endDate">
+                                </div>
+                            </div>
+                        </div> -->
+                </form>
+
+                <div class="table-responsive">
+                    <table id="rents-query-results" class="table align-middle table-bordered table-hover text-center mt-3 rounded overflow-hidden">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Veículo</th>
+                            <th scope="col">Cobertura</th>
+                            <th scope="col">Data Inicial</th>
+                            <th scope="col">Data Final</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rents-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <div class="modal fade" id="manageRent" tabindex="-1" aria-labelledby="manageRentLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div id="manageRentContent" class="modal-content"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancelDeleteRent" tabindex="-1" aria-labelledby="cancelDeleteRentLabel" aria-hidden="true"></div>
+
+    <div aria-live="polite" aria-atomic="true">
+        <div class="toast-container position-fixed p-3 bottom-0 end-0" id="toast-container" style="z-index:99999;"></div>
+    </div>
+</body>
+
+<script src="./assets/scripts/navbar.js"></script>
+<script src="./assets/scripts/footer.js"></script>
+<script src="./assets/scripts/contracts.js"></script>
+<script src="./assets/scripts/manage_contract.js"></script>
+
+</html>
