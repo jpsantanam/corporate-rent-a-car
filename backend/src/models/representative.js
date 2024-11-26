@@ -37,7 +37,7 @@ const representative = database.define('representative', {
         }
     },
     phone: {
-        type: sequelize.NUMBER,
+        type: sequelize.STRING,
         allowNull: false,
         validate: {
             len: [8, 14]

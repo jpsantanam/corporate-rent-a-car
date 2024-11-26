@@ -12,7 +12,7 @@ const customer = database.define('customer', {
         allowNull: false
     },
     cpf: {
-        type: sequelize.NUMBER,
+        type: sequelize.STRING,
         allowNull: false,
         unique: true,
         validate: {
@@ -58,7 +58,7 @@ const customer = database.define('customer', {
         }
     },
     telephone: {
-        type: sequelize.NUMBER,
+        type: sequelize.STRING,
         allowNull: false,
         unique: true,
         validate: {

@@ -28,7 +28,7 @@ const company = database.define('company', {
         }
     },
     stateRegistration: {
-        type: sequelize.NUMBER,
+        type: sequelize.STRING,
         allowNull: false,
         unique: true,
         validate: {

@@ -24,7 +24,7 @@ async function createDefaultFines() {
               "dateFine": "2023-11-05",
               "observation": "Estacionamento irregular",
               "location": "Rua Consolação, São Paulo",
-              "type": "Média",
+              "type": "Media",
               "vehicleId": 3,
               "rentId": 3
             },
@@ -35,7 +35,7 @@ async function createDefaultFines() {
               "dateFine": "2023-09-05",
               "observation": "Avanço de sinal vermelho",
               "location": "Av. Faria Lima, São Paulo",
-              "type": "Gravíssima",
+              "type": "Gravissima",
               "vehicleId": 2,
               "rentId": 1
             },

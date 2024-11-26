@@ -10,7 +10,7 @@ async function createDefaultMaintenances() {
                 "nextReviewDate": "2024-02-20",
                 "kilometers": 35000,
                 "observation": "Revisão geral do sistema de ar-condicionado",
-                "type": "Preventiva",
+                "type": "preventiva",
                 "situation": "finalizada",
                 "vehicleId": 1
             },
@@ -20,7 +20,7 @@ async function createDefaultMaintenances() {
                 "nextReviewDate": "2024-03-15",
                 "kilometers": 42000,
                 "observation": "Troca de óleo e verificação dos freios",
-                "type": "Preventiva",
+                "type": "preventiva",
                 "situation": "finalizada",
                 "vehicleId": 2
             },
@@ -30,7 +30,7 @@ async function createDefaultMaintenances() {
                 "nextReviewDate": "2024-04-05",
                 "kilometers": 47000,
                 "observation": "Ajuste do alinhamento e balanceamento das rodas",
-                "type": "Preventiva",
+                "type": "preventiva",
                 "situation": "finalizada",
                 "vehicleId": 3
             }

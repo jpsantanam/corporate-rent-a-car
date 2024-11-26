@@ -79,7 +79,7 @@ async function createDefaultCustomers() {
         name: "Ana Beatriz Gomes",
         fatherName: "Fernando Gomes",
         motherName: "Paula Gomes",
-        maritalStatus: "viúvo",
+        maritalStatus: "viuvo",
         birthday: "1975-05-30T00:00:00.000Z",
         email: "ana.beatriz@empresa.com",
         telephone: 31987651234,

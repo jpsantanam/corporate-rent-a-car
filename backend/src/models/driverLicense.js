@@ -22,7 +22,7 @@ const driverLicense = database.define('driverLicense', {
         allowNull: false
     },
     category: {
-        type: sequelize.ENUM('A', 'B', 'C', 'D', 'E'),
+        type: sequelize.ENUM('A', 'B', 'C', 'D', 'E', 'AB'),
         allowNull: false
     },
     issuingBody: {

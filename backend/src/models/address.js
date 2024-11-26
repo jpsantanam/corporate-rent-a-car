@@ -9,7 +9,7 @@ const address = database.define('address', {
         allowNull: false
     },
     cep: {
-        type: sequelize.NUMBER,
+        type: sequelize.STRING,
         allowNull: false,
         validate: {
             len: [8, 8]
@@ -23,7 +23,7 @@ const address = database.define('address', {
         }
     },
     number: {
-        type: sequelize.NUMBER,
+        type: sequelize.STRING,
         allowNull: false
     },
     complement: {
