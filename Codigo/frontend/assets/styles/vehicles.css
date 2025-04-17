@@ -1,0 +1,10 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.popover {
+    --bs-popover-max-width: 500px;
+}
+
+#motorization-range-container { text-align: initial !important; }

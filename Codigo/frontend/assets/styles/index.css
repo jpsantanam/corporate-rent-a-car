@@ -1,0 +1,26 @@
+@import url("/assets/styles/variaveis.css");
+body{
+    background-color: var(--primary-color);
+}
+
+body main > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    width: 60%;
+}
+
+form button.btn-primary  {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+}
